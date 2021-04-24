@@ -1,7 +1,7 @@
 ﻿
 namespace ntpvize_aysegulozkilic
 {
-    partial class Form1
+    partial class Frmxmlyeni
     {
         /// <summary>
         /// Required designer variable.
@@ -143,14 +143,14 @@ namespace ntpvize_aysegulozkilic
             this.label1.TabIndex = 0;
             this.label1.Text = "Başlık:";
             // 
-            // Form1
+            // Frmxmlyeni
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1118, 524);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
+            this.Name = "Frmxmlyeni";
             this.Text = "Güncel Haberler";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace ntpvize_aysegulozkilic
 {
-    public partial class Form1 : Form
+    public partial class Frmxmlyeni : Form
     {
-        public Form1()
+        public Frmxmlyeni()
         {
             InitializeComponent();
         }
