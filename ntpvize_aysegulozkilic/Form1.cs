@@ -20,25 +20,26 @@ namespace ntpvize_aysegulozkilic
 
         public Frmxmlyeni()
         {
-        }
-
-        public Frmxmlyeni(Haberler haber)
-        {
-            
             InitializeComponent();
             try
-            { 
-                if(File.Exists(yol))
-                    {
+            {
+                if (File.Exists(yol))
+                {
                     File.Delete(yol);
 
-                    }
+                }
 
             }
             catch { }
         }
 
-            private void HaberleriGoster()
+        public Frmxmlyeni(Haberler haber)
+        {
+
+
+        }
+
+        private void HaberleriGoster()
         {
             List<Haberler> guncelliste = new List<Haberler>();
             dataGridView1.DataSource = guncelliste;
@@ -69,16 +70,22 @@ namespace ntpvize_aysegulozkilic
             labelaciklama.Text = haberr.Aciklama.Trim();
             labeltarih.Text = haberr.Tarih.ToString();
             labellink.Text = haberr.Link.Trim();
-           // HaberYaz(haberr); aşağıda tanımlansın
+            HaberlerYaz(haberr);
 
+          
 
-
-
-
-
-
-
-
+        }
+        public void HaberlerYaz(Haberler haberr)
+        {
+           
+            using(TextWriter yaz =new StreamWriter(yol,true))
+            {
+                yaz.WriteLine("Haber No:" + haberr.Id.Trim(), Environment.NewLine);
+                yaz.WriteLine("Başlık:" + haberr.Baslik.Trim(), Environment.NewLine);
+                yaz.WriteLine("Açıklama:" + haberr.Aciklama.Trim(), Environment.NewLine);
+                yaz.WriteLine("Link:" + haberr.Link.Trim(), Environment.NewLine);
+                yaz.WriteLine("Tarih:" + haberr.Tarih.ToString(), Environment.NewLine);
+            }
 
         }
 
