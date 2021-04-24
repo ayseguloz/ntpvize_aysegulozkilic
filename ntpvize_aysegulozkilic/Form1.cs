@@ -4,8 +4,10 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 using System.Windows.Forms;
 
 namespace ntpvize_aysegulozkilic
@@ -16,5 +18,7 @@ namespace ntpvize_aysegulozkilic
         {
             InitializeComponent();
         }
+
+        
     }
 }
