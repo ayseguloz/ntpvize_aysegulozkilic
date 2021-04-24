@@ -17,7 +17,12 @@ namespace ntpvize_aysegulozkilic
         List<Haberler> Haberleryeni = new List<Haberler>();
         List<Haberler> datagridhaber = new List<Haberler>();
         string yol = @"c:\Haberler\GuncelHaberler.txt";
+
         public Frmxmlyeni()
+        {
+        }
+
+        public Frmxmlyeni(Haberler haber)
         {
             
             InitializeComponent();
@@ -51,6 +56,29 @@ namespace ntpvize_aysegulozkilic
 
             }
            
+
+        }
+
+        private void YeniHaberiGoster(Haberler haberr)
+        {
+            Frmxmlyeni Frmxmlyeni = new Frmxmlyeni(haberr);
+            Frmxmlyeni.ShowDialog();
+
+            groupBox1.Text = "En Son Haberler(" + haberr.Id.Trim() + ")";
+            labelbaslik.Text = haberr.Baslik.Trim();
+            labelaciklama.Text = haberr.Aciklama.Trim();
+            labeltarih.Text = haberr.Tarih.ToString();
+            labellink.Text = haberr.Link.Trim();
+           // HaberYaz(haberr); aşağıda tanımlansın
+
+
+
+
+
+
+
+
+
 
         }
 

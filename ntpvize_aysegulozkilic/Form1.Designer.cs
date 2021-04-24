@@ -34,7 +34,7 @@ namespace ntpvize_aysegulozkilic
             this.labeltarih = new System.Windows.Forms.Label();
             this.labellink = new System.Windows.Forms.Label();
             this.labelaciklama = new System.Windows.Forms.Label();
-            this.labalbaslik = new System.Windows.Forms.Label();
+            this.labelbaslik = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,7 +49,7 @@ namespace ntpvize_aysegulozkilic
             this.groupBox1.Controls.Add(this.labeltarih);
             this.groupBox1.Controls.Add(this.labellink);
             this.groupBox1.Controls.Add(this.labelaciklama);
-            this.groupBox1.Controls.Add(this.labalbaslik);
+            this.groupBox1.Controls.Add(this.labelbaslik);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
@@ -98,14 +98,14 @@ namespace ntpvize_aysegulozkilic
             this.labelaciklama.TabIndex = 5;
             this.labelaciklama.Text = "labelacıklama";
             // 
-            // labalbaslik
+            // labelbaslik
             // 
-            this.labalbaslik.AutoSize = true;
-            this.labalbaslik.Location = new System.Drawing.Point(68, 32);
-            this.labalbaslik.Name = "labalbaslik";
-            this.labalbaslik.Size = new System.Drawing.Size(74, 17);
-            this.labalbaslik.TabIndex = 4;
-            this.labalbaslik.Text = "labelbaslik";
+            this.labelbaslik.AutoSize = true;
+            this.labelbaslik.Location = new System.Drawing.Point(68, 32);
+            this.labelbaslik.Name = "labelbaslik";
+            this.labelbaslik.Size = new System.Drawing.Size(74, 17);
+            this.labelbaslik.TabIndex = 4;
+            this.labelbaslik.Text = "labelbaslik";
             // 
             // label4
             // 
@@ -166,7 +166,7 @@ namespace ntpvize_aysegulozkilic
         private System.Windows.Forms.Label labeltarih;
         private System.Windows.Forms.Label labellink;
         private System.Windows.Forms.Label labelaciklama;
-        private System.Windows.Forms.Label labalbaslik;
+        private System.Windows.Forms.Label labelbaslik;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
