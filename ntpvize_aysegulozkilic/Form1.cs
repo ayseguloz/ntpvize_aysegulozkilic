@@ -16,9 +16,25 @@ namespace ntpvize_aysegulozkilic
     {
         public Frmxmlyeni()
         {
+            List<Haberler> Haberleryeni = new List<Haberler>();
+            List<Haberler> datagridhaber = new List<Haberler>();
+            string yol = @"c:\Haberler\GuncelHaberler.txt";
             InitializeComponent();
-        }
+            try
+            { 
+                if(File.Exists(yol))
+                    {
+                    File.Delete(yol);
 
-        
+                    }
+
+            }
+            catch { }
+        }
+       
+
+
+
+
     }
 }
