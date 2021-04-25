@@ -12,7 +12,7 @@ namespace ntpvize_aysegulozkilic
         public string Baslik { get; set; } = "";
         public string Aciklama { get; set; } = "";
         public string Link { get; set; } = "";
-        public string Tarih { get; set; } = "";
+        public DateTime Tarih { get; set; } = DateTime.Today;
 
     }
 }

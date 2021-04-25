@@ -89,13 +89,53 @@ namespace ntpvize_aysegulozkilic
 
         }
 
+        private void HaberGetir()
+        {
+            Haberleryeni = new List<Haberler>();
+            XmlDocument xml = new XmlDocument();
+            xml.Load("https://www.aa.com.tr/tr/rss/default?cat=guncel");
+            XmlNodeList xmlim = xml.SelectNodes("rss/channel/item");
+            foreach(XmlNode xmli in  xmlim)
+            { 
+                try
+                {
+                    Haberler haberler = new Haberler();
 
+                    XmlNode xmlekle = xmli.SelectSingleNode("title");
+                    haberler.Baslik = xmlekle != null ? xmlekle.InnerText : "";
 
+                    xmlekle = xmli.SelectSingleNode("guid");
+                    haberler. Id = xmlekle != null ? xmlekle.InnerText : "";
 
+                    xmlekle = xmli.SelectSingleNode("pubDate");
+                    string tarih  = xmlekle != null ? xmlekle.InnerText : "";
+                    haberler.Tarih = Convert.ToDateTime(tarih);
 
+                    xmlekle = xmli.SelectSingleNode("description");
+                    haberler.Aciklama = xmlekle != null ? xmlekle.InnerText : "";
 
+                    xmlekle = xmli.SelectSingleNode("description");
+                    haberler.Aciklama = xmlekle != null ? xmlekle.InnerText : "";
 
+                    if (haberler.Tarih >= DateTime.Today)
+                    {
+                        Haberleryeni.Add(haberler);
+                    }
+                }
+                catch { }
+                HaberGetir();
+            }
 
+        }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                HaberGetir();
+
+            }
+            catch { }
+        }
     }
 }
